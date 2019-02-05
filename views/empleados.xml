@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="empleados_action" name="Empleados"
+                     res_model="empresa.empleados" />
+
+
+        <record id="empleados_view_form" model="ir.ui.view">
+            <field name="name">Empleados almacenados</field>
+            <field name="model">empresa.empleados</field>
+            <field name="arch" type="xml">
+
+                <tree>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="departamento" />
+                    <field name="salario" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="empleados_view_form" model="ir.ui.view">
+            <field name="name">Agregar Empleados</field>
+            <field name="model">empresa.empleados</field>
+            <field name="arch" type="xml">
+                <form>
+                   <header>
+                       <button name="limpiar" type="object" string="Limpia" class="oe_highlight" />
+                       <button name="limpia_todo" type="object" string="Limpia todo" class="oe_highlight" />
+
+
+                    </header>
+
+                    <group>
+                        <field name="dni" />
+                        <field name="nombre" />
+                        <field name="departamento" />
+                        <field name="salario" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="empleados_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de Empleados</field>
+            <field name="model">empresa.empleados</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="dni" />
+                    <field name="nombre" />
+                    <field name="departamento" />
+                    <field name="salario" />
+                </search>
+            </field>
+        </record>
+        <menuitem name="Empleados" id="menu_empleados" action="empleados_action" parent="menu_inicio" sequence="10"/>
+
+    </data>
+</odoo>
