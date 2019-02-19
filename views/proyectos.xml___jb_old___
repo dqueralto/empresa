@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <act_window id="proyectos_action" name="Proyectos"
+                     res_model="empresa.proyectos" />
+
+
+        <record id="pedidos_view_form" model="ir.ui.view">
+            <field name="name">Proyectos Almacenados</field>
+            <field name="model">empresa.proyectos</field>
+            <field name="arch" type="xml">
+
+                <tree>
+                    <field name="cod" />
+                    <field name="nombre" />
+                    <field name="descripcion" />
+                    <field name="fechaini" />
+                    <field name="fechafin" />
+                    <field name="departamento" />
+                    <field name="encargado" />
+                    <field name="presupuesto" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="proyectos_view_form" model="ir.ui.view">
+            <field name="name">Agregar Proyectos</field>
+            <field name="model">empresa.proyectos</field>
+            <field name="arch" type="xml">
+                <form>
+                   <header>
+                       <button name="limpiar" type="object" string="Limpia" class="oe_highlight" />
+                       <button name="limpia_todo" type="object" string="Limpia todo" class="oe_highlight" />
+
+
+                    </header>
+
+                    <group>
+                        <field name="cod" />
+                        <field name="nombre" />
+                        <field name="descripcion" />
+                        <field name="fechaini" />
+                        <field name="fechafin" />
+                        <field name="departamento" />
+                        <field name="encargado" />
+                        <field name="presupuesto" />
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="proyectos_view_search" model="ir.ui.view">
+            <field name="name">Busqueda de Proyectos</field>
+            <field name="model">empresa.proyectos</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="cod" />
+                    <field name="nombre" />
+                    <field name="descripcion" />
+                    <field name="fechaini" />
+                    <field name="fechafin" />
+                    <field name="departamento" />
+                    <field name="encargado" />
+                    <field name="presupuesto" />
+                </search>
+            </field>
+        </record>
+        <menuitem name="Proyectos" id="menu_proyectos" action="proyectos_action" parent="menu_inicio" sequence="10"/>
+
+    </data>
+</odoo>
