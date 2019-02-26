@@ -6,9 +6,9 @@ class Proyectos(models.Model):
     cod = fields.Char('Codigo: ', required=True)
     nombre = fields.Char('Nombre: ', required=True)
 
-    descripcion = fields.Char('Descripción: ', required=True)
+    descripcion = fields.Char('Descripcion: ', required=True)
     fechaini = fields.Date('Fecha de Inicio: ', required=True)
-    fechafin = fields.Date('Fecha de Finalización: ', required=False)
+    fechafin = fields.Date('Fecha de Finalizacion: ', required=False)
 
     departamento = fields.Many2one('empresa.departamentos','Departamento: ', required=True)
     encargado = fields.Many2one('empresa.empleados','Encargado: ', required=True)

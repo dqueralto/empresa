@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
-        <act_window id="departamentos_action" name="Departamentos"
-                     res_model="empresa.departamentos" />
-
+       <!-- <act_window id="departamentos_action" name="Departamentos"
+                     res_model="empresa.departamentos" />-->
+<act_window id="departamentos_action" name="Departamentos" res_model="empresa.departamentos"/>
 
         <record id="departamentos_view_form" model="ir.ui.view">
             <field name="name">Departamentos Almacenados</field>

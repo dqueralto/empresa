@@ -5,8 +5,8 @@ class Departamentos(models.Model):
     _name = 'empresa.departamentos'
     cod = fields.Char('Codigo: ', required=True)
     nombre = fields.Char('Nombre: ', required=True)
-    descripcion = fields.Char('Descripción: ', required=True)
-    extensiontlf = fields.Integer('Extensión Telefonica: ', required=True)
+    descripcion = fields.Char('Descripcion: ', required=True)
+    extensiontlf = fields.Integer('Extension Telefonica: ', required=True)
     email = fields.Char('Email: ', required=True)
 
 
